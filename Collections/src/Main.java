@@ -26,7 +26,7 @@ public class Main {
         for (String key : studentList.keySet()) {
             System.out.print("<= " + key + " =>");
             for (String studentWithClass : studentList.get(key)) {
-                if (studentWithClass.split(" ")[0].contains("an")) {
+                if (studentWithClass.split(" ")[0].endsWith("an")) {
                     System.out.print(studentWithClass);
                 }
                 System.out.println();
@@ -37,7 +37,7 @@ public class Main {
         // Stream Api
         for (String key : studentList.keySet()) {
             String[] students = studentList.get(key);
-            System.out.println(key + "--" + Arrays.stream(students).filter(x -> x.split(" ")[0].contains("an")).toList());
+            System.out.println(key + "--" + Arrays.stream(students).filter(x -> x.split(" ")[0].endsWith("an")).toList());
         }
 
 
@@ -52,7 +52,7 @@ public class Main {
             String[] filteredStudents = new String[3];
             for (String studentWithClass : studentList.get(key)) {
                 // System.out.println(studentWithClass);
-                if (studentWithClass.split(" ")[0].contains("an")) {
+                if (studentWithClass.split(" ")[0].endsWith("an")) {
                     filteredStudents[index] = studentWithClass;
                     index++;
                 }
