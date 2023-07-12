@@ -26,7 +26,7 @@ public class DansCourseService {
         danceCourse.setName(name);
         danceCourse.setAddress(address);
         danceCourse.setFounder(founder);
-        danceCourse.setAddress(taxNumber);
+        danceCourse.setTaxNumber(taxNumber);        
         danceCourse.setTaxOffice(taxOffice);
         danceCourse.setBankAccountList(bankAccountList);
         danceCourse.setPaymentMovementList(paymentMovementList);
